@@ -1,3 +1,3 @@
-def Array
+def FixedArray
 
 end
