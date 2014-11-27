@@ -1,36 +1,33 @@
 # Arrays
 
-In lower level languages (including the languages Javascript and Ruby and implemented in) Arrays are actually a _fixed size_.  Create a simple FixedArray class. You should pass it a size when you create it, and it should never grow or shrink in size.
+Way down deep, past the abstraction of Ruby, data you don't write to disk is stored in _memory_. You can access pieces of memory by numerical index (or "address"), kind of like an array. You can say "allocate me 32 bytes of memory" and you'll get a chunk of memory that's 32 bytes, carved out somewhere in the gigabytes of memory installed on your computer.
+
+Every program on your system has to _pre-allocate_ the memory it wants to use. It can't say "give me 32 bytes, but I might need more later."
+
+At this low-level there are no "dynamically sized arrays. Arrays are, in truth, just chunks of memory that you access by address. They are a fixed size; you say how big they are up front and that's all you get.
 
 ## Why is this important?
 
-It's easy to take for granted that all of that wonderful dynamic resizing is ultimately base of static data structures. It useful to demystify the magic.
+In low-level languages like C, fixed-size arrays are all you get. In high-level languages like Ruby, arrays can grow and shrink as you need them too, but down deep they're built using fixed-size arrays that _can't_ change size.
 
-Further, (Fixed)Arrays are the fastest and most space efficient choice when you know in advanced how many items a list should contain.
+There are no Hashes or Dynamic Arrays at a low level, your only data structure is the fixed array. We'll be building many data structures in this unit, but all of them will ultimately be built up from the humble fixed-size array.
 
-##Releases
+## Releases
 
-###Release 0: Implement `FixedArray`
+In the course of this challenge you will implement your own `FixedArray` class to mimic the lower level fixed-size arrays. We will use this `FixedArray` class to build up progressively more advanced data structures.
 
-Implement and write RSpec tests for the `FixedArray` class, supporting the following interface.
+### Release 1: Implement `FixedArray`
 
-####Interface
-- `FixedArray#new(size)` - Instantiate a new array
-- `FixedArray#get(index)` - Get a value from the receiver array at an index
-- `FixedArray#set(index, element)` - Set a value in the receiver array at an index
+Implement and write RSpec tests for the `FixedArray` class. The class must conform to the following interface:
 
-The methods should throw an error when the index is out of bounds.
+#### Interface
+- `FixedArray#new(size)`: Instantiate a new array with space for `size` elements.
+- `FixedArray#get(index)`: Get a value from the array at the specified index.
 
-###Release 1: Implement `ResizableArray`
+  Throw an `OutOFBoundsException` if the user tries to get a value at an index outside the bounds of the array.
+- `FixedArray#set(index, element)`: Set a value in the array at a specific index.
 
-Implement and write RSpec tests for the `ResizableArray` class, supporting the following interface.
-
-####Interface
-- `FixedArray#new(initial_size)` - Instantiate a new array
-- `FixedArray#get(index)` - Get a value from the receiver array at an index
-- `FixedArray#set(index, element)` - Set a value in the receiver array at an index
-
-You must implement your `ResizableArray` class using your `FixedArray` class.
+  Throw an `OutOFBoundsException` if the user tries to get a value at an index outside the bounds of the array.
 
 ##Resources
 
