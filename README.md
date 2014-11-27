@@ -1,4 +1,4 @@
-# Arrays
+# Fixed Arrays
 
 Way down deep, past the abstraction of Ruby, data you don't write to disk is stored in _memory_. You can access pieces of memory by numerical index (or "address"), kind of like an array. You can say "allocate me 32 bytes of memory" and you'll get a chunk of memory that's 32 bytes, carved out somewhere in the gigabytes of memory installed on your computer.
 
