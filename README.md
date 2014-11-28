@@ -12,15 +12,13 @@ In low-level languages like C, fixed-size arrays are all you get. In high-level 
 
 There are no Hashes or Dynamic Arrays at a low level, your only data structure is the fixed array. We'll be building many data structures in this unit, but all of them will ultimately be built up from the humble fixed-size array.
 
-## Releases
-
 In the course of this challenge you will implement your own `FixedArray` class to mimic the lower level fixed-size arrays. We will use this `FixedArray` class to build up progressively more advanced data structures.
 
-### Release 1: Implement `FixedArray`
+## Release 1: Implement `FixedArray`
 
 Implement and write RSpec tests for the `FixedArray` class. The class must conform to the following interface:
 
-#### Interface
+### Interface
 - `FixedArray#new(size)`: Instantiate a new array with space for `size` elements.
 - `FixedArray#get(index)`: Get a value from the array at the specified index.
 
@@ -29,7 +27,7 @@ Implement and write RSpec tests for the `FixedArray` class. The class must confo
 
   Throw an `OutOFBoundsException` if the user tries to get a value at an index outside the bounds of the array.
 
-##Resources
+#Resources
 
 * [Wikipedia: Array data type](http://en.wikipedia.org/wiki/Array_data_type#Abstract_arrays)
 * [Wikipedia: Array data structure](http://en.wikipedia.org/wiki/Array_data_structure)
