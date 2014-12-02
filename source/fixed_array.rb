@@ -1,3 +1,3 @@
-def FixedArray
+class FixedArray
 
 end
