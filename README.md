@@ -19,11 +19,11 @@ In the course of this challenge you will implement your own `FixedArray` class t
 Implement and write RSpec tests for the `FixedArray` class. The class must conform to the following interface:
 
 ### Interface
-- `FixedArray#new(size)`: Instantiate a new array with space for `size` elements.
+- `FixedArray#new(size)`: Instantiate a new array with space for `size` elements. Return the array
 - `FixedArray#get(index)`: Get a value from the array at the specified index.
 
   Throw an `OutOFBoundsException` if the user tries to get a value at an index outside the bounds of the array.
-- `FixedArray#set(index, element)`: Set a value in the array at a specific index.
+- `FixedArray#set(index, element)`: Set a value in the array at a specific index. Return the element
 
   Throw an `OutOFBoundsException` if the user tries to get a value at an index outside the bounds of the array.
 
